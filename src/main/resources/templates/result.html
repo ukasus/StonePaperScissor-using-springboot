@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Intern Project</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+table {
+  border-collapse: collapse;
+  border:"1";
+}
+
+table, td, th {
+  border: 1px solid black;
+  width:100px;
+  
+}
+.Bold { font-weight: bold; }
+</style>
+</head>
+<body>
+	<div th:each="gm: ${gamevalue}">
+    <p><h4 th:text="${gmStat.count}"></h4>Iteration</p>
+    <div id="player-choice" style="margin-bottom:50px;">
+    <table class="table player-choice" >
+        <tr>
+            <th>Player1</th>
+            <th>Player2</th>
+            <th>Player3</th>
+            <th>Player4</th>
+        </tr>
+        <tr>
+            <td class="Bold" style="height:50px;width:100px" th:text="${gm.p1}" ></td>
+            <td class="Bold" style="height:50px;width:100px" th:text="${gm.p2}"></td>
+            <td class="Bold" style="height:50px;width:100px" th:text="${gm.p3}"></td>
+            <td class="Bold" style="height:50px;width:100px" th:text="${gm.p4}"></td>
+        </tr>
+    </table>
+    </div>
+    <div id="player-score" style="margin-bottom:100px;">
+    <table class="player-score">
+    <tr>
+        <th>Totals</th>
+        <th style="width:100px"></th>
+        <th colspan="4">Against</th>
+        
+     </tr>
+     <tr>
+        <th style="width:100px"></th>
+        <th style="width:100px"> </th>
+        <th>Player1</th>
+        <th>Player2</th>
+        <th>Player3</th>
+        <th>Player4</th>
+        
+     </tr>
+     <tr>
+        <th rowspan="4">Players Wins</th>
+        <th>Player1</th>
+        <th style="width:100px" >-</th>
+        <th th:text="${gm.ap1[0]}"></th>
+        <th th:text="${gm.ap1[1]}"></th>
+        <th th:text="${gm.ap1[2]}"></th>
+     </tr>
+     <tr>
+ 
+        <th>Player2</th>
+        <th th:text="${gm.ap2[0]}"></th>
+        <th style="width:100px" >-</th>
+        
+        <th th:text="${gm.ap2[1]}"></th>
+        <th th:text="${gm.ap2[2]}"></th>
+     </tr>
+     <tr>
+ 
+        <th>Player3</th>
+        <th th:text="${gm.ap3[0]}"></th>
+        
+        
+        <th th:text="${gm.ap3[1]}"></th>
+        <th style="width:100px" >-</th>
+        <th th:text="${gm.ap3[2]}"></th>
+     </tr>
+      <tr>
+ 
+        <th>Player4</th>
+        <th th:text="${gm.ap4[0]}"></th>
+        
+        
+        <th th:text="${gm.ap4[1]}"></th>
+        
+        <th th:text="${gm.ap4[2]}"></th>
+        <th style="width:100px" >-</th>
+     </tr>
+     
+    
+    
+    
+    </table>
+    </div>
+    
+</div>
+</body>
+</html>
