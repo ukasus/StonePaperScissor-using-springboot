@@ -26,12 +26,12 @@ public class gameclass {
 		{
 			if(p2=="Scissor")
 			{
-				ap1[0]=0;
+				ap1[0]=1;
 				
 			}
 			if(p3=="Scissor")
 			{
-				ap1[1]=0;
+				ap1[1]=1;
 				
 			}
 			if(p4=="Scissor")

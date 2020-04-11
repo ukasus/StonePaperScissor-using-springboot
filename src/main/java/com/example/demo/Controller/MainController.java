@@ -20,7 +20,7 @@ public class MainController {
 		return "index.html";
 	}
 	
-	@PostMapping("/submit")
+	@PostMapping("/startgame")
 	public String startwork(Model model)
 	{
 		ArrayList<gameclass> gamevalue=new ArrayList<>();

@@ -7,21 +7,29 @@
 table {
   border-collapse: collapse;
   border:"1";
+  
 }
 
 table, td, th {
   border: 1px solid black;
-  width:100px;
+  
   
 }
+
+
 .Bold { font-weight: bold; }
 </style>
 </head>
 <body>
-	<div th:each="gm: ${gamevalue}">
-    <p><h4 th:text="${gmStat.count}"></h4>Iteration</p>
+	<div th:each="gm: ${gamevalue}" id="maindiv" style="margin-left:100px;">
+    
+    <h2>
+    <span th:text="${gmStat.count}" th:remove="tag">title</span>
+    <small >-Iteration</small>
+    </h2>
+    
     <div id="player-choice" style="margin-bottom:50px;">
-    <table class="table player-choice" >
+    <table class="table player-choice" width="1000" >
         <tr>
             <th>Player1</th>
             <th>Player2</th>
@@ -29,15 +37,15 @@ table, td, th {
             <th>Player4</th>
         </tr>
         <tr>
-            <td class="Bold" style="height:50px;width:100px" th:text="${gm.p1}" ></td>
-            <td class="Bold" style="height:50px;width:100px" th:text="${gm.p2}"></td>
-            <td class="Bold" style="height:50px;width:100px" th:text="${gm.p3}"></td>
-            <td class="Bold" style="height:50px;width:100px" th:text="${gm.p4}"></td>
+            <td class="Bold" th:text="${gm.p1}" ></td>
+            <td class="Bold" th:text="${gm.p2}"></td>
+            <td class="Bold" th:text="${gm.p3}"></td>
+            <td class="Bold" th:text="${gm.p4}"></td>
         </tr>
     </table>
     </div>
     <div id="player-score" style="margin-bottom:100px;">
-    <table class="player-score">
+    <table class="player-score" width="1000">
     <tr>
         <th>Totals</th>
         <th style="width:100px"></th>
