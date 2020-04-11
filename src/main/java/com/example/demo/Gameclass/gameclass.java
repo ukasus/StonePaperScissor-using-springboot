@@ -84,12 +84,12 @@ public class gameclass {
 		{
 			if(p1=="Scissor")
 			{
-				ap2[0]=0;
+				ap2[0]=1;
 				
 			}
 			if(p3=="Scissor")
 			{
-				ap2[1]=0;
+				ap2[1]=1;
 				
 			}
 			if(p4=="Scissor")
@@ -142,12 +142,12 @@ public class gameclass {
 		{
 			if(p1=="Scissor")
 			{
-				ap3[0]=0;
+				ap3[0]=1;
 				
 			}
 			if(p2=="Scissor")
 			{
-				ap3[1]=0;
+				ap3[1]=1;
 				
 			}
 			if(p4=="Scissor")
@@ -200,12 +200,12 @@ public class gameclass {
 		{
 			if(p1=="Scissor")
 			{
-				ap4[0]=0;
+				ap4[0]=1;
 				
 			}
 			if(p2=="Scissor")
 			{
-				ap4[1]=0;
+				ap4[1]=1;
 				
 			}
 			if(p3=="Scissor")
